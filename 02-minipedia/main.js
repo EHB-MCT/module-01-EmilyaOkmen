@@ -57,3 +57,10 @@ buttonFR.addEventListener("click", function(){
 image.src = "./appel.jpg"; //img
 image.alt = "Een rode appel"; //naam img
 article.insertBefore(image, subtitle); //insert image before subtitles
+
+/*andere manier*/
+
+//let imgElement = document.createElement("img"); => element
+//imgElement.src = ".appel.jpg";
+//imgElement.alt = "een rode appel";
+//document.querySelector(".article").append(imgElement); => append voegt de article gewoon onderaan aan, prepend zet het tussen de tetxt en titels?
