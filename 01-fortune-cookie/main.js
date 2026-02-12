@@ -15,10 +15,35 @@ const fortunes = [
 
 // 1. Select Elements
 let display = document.querySelector("#fortune-display");
-let button = document.querySelector("#cookie-btn");
+
+let button = document.querySelector("#cookie-btn"); 
+
+//button ophalen //# => voor een id want als we '' gebruiken gaat hij denke dat het een type html is maar niet wat precies.
+//console.log(display) //opgehaald in console
+
+//display.innerText = 'Halloo'
+//display.innerText = fortunes [0]; =>  random between 0 - frotune.length
+//InnerText veranderd de tekst in de html
+
+//display.innerText = fortunes[randomIndex]; => randomised de tekst in de arrays bij een refresh van de pagina en niet met button
+
+/*queryselector = selecteert er 1 
+queryselector = selecteer alle elementen die voldoen aan die voorwaarden 
+=> eerste element word gereturned */
+
 
 // 2. Add event Listener
 //      generate a random index
 //      get the fortune string
 //      update the display
 
+/*button.addEventListener("click", () => {
+    console.log("click");
+    display.innerText = fortunes[Math.floor(Math.random() * fortunes.length)];
+}); */
+
+button.addEventListener("click", function() {
+    console.log("click");
+    let randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+    display.innerText = randomFortune;
+}); 
