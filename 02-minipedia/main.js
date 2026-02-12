@@ -16,13 +16,13 @@ let article = document.querySelector(".article");
 let buttonFR = document.querySelector("#btn-fr");
 let buttonNL = document.querySelector("#btn-nl");
 
-let image = document.createElement("img");
+let image = document.createElement("img"); //add image
 
 //2. Set initial content on load
 
 titel.innerText = titleNL;
 subtitle.innerText = subtitleNL;
-content.innerText = textNL;
+content.innerText = textNL; 
 
 
 //3. Select buttons
@@ -32,13 +32,13 @@ content.innerText = textNL;
 //4. Add event listeners
 buttonNL.addEventListener("click", function(){
 
-     titel.innerText = titleNL;
+     titel.innerText = titleNL;    
     subtitle.innerText = subtitleNL;
     content.innerText = textNL;
     console.log("click");
 
-buttonFR.disabled = false;
-buttonNL.disabled = true;
+buttonFR.disabled = false; //actief
+buttonNL.disabled = true; //niet actief
 
 })
 
@@ -48,12 +48,12 @@ buttonFR.addEventListener("click", function(){
     subtitle.innerText = subtitleFR;
     content.innerText = textFR;
 
-    buttonFR.disabled = true;   
-    buttonNL.disabled = false;
+    buttonFR.disabled = true;  //niet actief
+    buttonNL.disabled = false; //actief
 });
 
 //5. Create, configure and append image
 
-image.src = "./appel.jpg";
-image.alt = "Een rode appel";
-article.insertBefore(image, subtitle);
+image.src = "./appel.jpg"; //img
+image.alt = "Een rode appel"; //naam img
+article.insertBefore(image, subtitle); //insert image before subtitles
